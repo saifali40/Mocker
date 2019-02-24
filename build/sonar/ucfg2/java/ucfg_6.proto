@@ -1,25 +1,29 @@
 
-!in.saifali.MockUtil#getInteger()I
-__unknown_file ("1*Ô
+Win.saifali.MockUtil#getMockData(Ljava/lang/Class;[Ljava/lang/String;)Ljava/lang/Object;
+__unknown_file ("1*ü
 1O
-E/Users/saif/workplace/oss/Mock/src/main/java/in/saifali/MockUtil.javac c(}{
+E/Users/saif/workplace/oss/Mock/src/main/java/in/saifali/MockUtil.javaB B(‘
+—
 O
-E/Users/saif/workplace/oss/Mock/src/main/java/in/saifali/MockUtil.javac c(
-%0java.util.Random"java.util.Randomê
-ç
+E/Users/saif/workplace/oss/Mock/src/main/java/in/saifali/MockUtil.javaB$ B(;
+%0java.util.List"<java.util.Arrays#asList([Ljava/lang/Object;)Ljava/util/List;*"
+java.util.Arrays*
+
+stringKv$Arrayì
+ê
 O
-E/Users/saif/workplace/oss/Mock/src/main/java/in/saifali/MockUtil.javac c(
-%1"java.util.Random#<init>()V*
-
-%0java.util.Random´®
+E/Users/saif/workplace/oss/Mock/src/main/java/in/saifali/MockUtil.javaB B(<
+%1T"cin.saifali.MockUtil#getMockData(Ljava/lang/Class;Ljava/util/Map;Ljava/util/List;)Ljava/lang/Object;*"
+in.saifali.MockUtil*
+
+tjava.lang.Class*
+""*
+
+%0java.util.List"\
 O
-E/Users/saif/workplace/oss/Mock/src/main/java/in/saifali/MockUtil.javac c(/	
-%2int"java.util.Random#nextInt(I)I*
-
-%0java.util.Random*
-""2
-nextInt(I)"Y
-O
-E/Users/saif/workplace/oss/Mock/src/main/java/in/saifali/MockUtil.javac c(9
-""B"
+E/Users/saif/workplace/oss/Mock/src/main/java/in/saifali/MockUtil.javaB B(=	
+
+%1T:
+tjava.lang.Class:
+stringKv$ArrayB"
 in.saifali.MockUtil

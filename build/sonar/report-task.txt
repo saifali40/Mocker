@@ -3,5 +3,5 @@ projectKey=saifali40_Mocker
 serverUrl=https://sonarcloud.io
 serverVersion=7.7.0.22107
 dashboardUrl=https://sonarcloud.io/dashboard?id=saifali40_Mocker
-ceTaskId=AWkgUpKCOVdBwFUR8DgE
-ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AWkgUpKCOVdBwFUR8DgE
+ceTaskId=AWkgg_9JOVdBwFUR8Dt7
+ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AWkgg_9JOVdBwFUR8Dt7

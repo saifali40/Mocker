@@ -1,261 +1,132 @@
 
-qin.saifali.MockUtil#getFieldsByType(Ljava/lang/Class;Ljava/util/Map;Ljava/lang/Object;Ljava/lang/reflect/Field;)V
-__unknown_file ("17*¨
-13O
-E/Users/saif/workplace/oss/Mock/src/main/java/in/saifali/MockUtil.java. .( Ê
-Ç
-O
-E/Users/saif/workplace/oss/Mock/src/main/java/in/saifali/MockUtil.java. .(0
-%15void"rin.saifali.MockUtil#getDefaultValues(Ljava/lang/Class;Ljava/util/Map;Ljava/lang/Object;Ljava/lang/reflect/Field;)V*"
-in.saifali.MockUtil*
-
-tjava.lang.Class*
-
-mapjava.util.Map*
-
-
-clzT*
-
-xjava.lang.reflect.Field*
-10*›
-14O
-E/Users/saif/workplace/oss/Mock/src/main/java/in/saifali/MockUtil.java, ,(ÍÊ
-O
-E/Users/saif/workplace/oss/Mock/src/main/java/in/saifali/MockUtil.java, ,(
-%12java.lang.String"3java.lang.reflect.Field#getName()Ljava/lang/String;*
-
-xjava.lang.reflect.Field2	getName()¹
-¶
-O
-E/Users/saif/workplace/oss/Mock/src/main/java/in/saifali/MockUtil.java,! ,(,
-%13java.lang.String"1in.saifali.MockUtil#getString()Ljava/lang/String;*"
-in.saifali.MockUtil±®
-O
-E/Users/saif/workplace/oss/Mock/src/main/java/in/saifali/MockUtil.java, ,(-
-%14java.lang.Object"Ijava.util.Map#put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;*
-
-mapjava.util.Map*
-
-%12java.lang.String*
-
-%13java.lang.String2)put(Ljava/lang/Object;Ljava/lang/Object;)*
-13*¦
-3O
-E/Users/saif/workplace/oss/Mock/src/main/java/in/saifali/MockUtil.java> >( Ê
-Ç
-O
-E/Users/saif/workplace/oss/Mock/src/main/java/in/saifali/MockUtil.java> >(0
-%39void"rin.saifali.MockUtil#getDefaultValues(Ljava/lang/Class;Ljava/util/Map;Ljava/lang/Object;Ljava/lang/reflect/Field;)V*"
-in.saifali.MockUtil*
-
-tjava.lang.Class*
-
-mapjava.util.Map*
-
-
-clzT*
-
-xjava.lang.reflect.Field*
-0*Ÿ
-15O
-E/Users/saif/workplace/oss/Mock/src/main/java/in/saifali/MockUtil.java+ +(ÊÇ
-O
-E/Users/saif/workplace/oss/Mock/src/main/java/in/saifali/MockUtil.java+ +(
-%8java.lang.Class"2java.lang.reflect.Field#getType()Ljava/lang/Class;*
-
-xjava.lang.reflect.Field2	getType()½º
-O
-E/Users/saif/workplace/oss/Mock/src/main/java/in/saifali/MockUtil.java+ +(!
-%9java.lang.String"+java.lang.Class#getName()Ljava/lang/String;*
-
-%8java.lang.Class2	getName()ÈÅ
-O
-E/Users/saif/workplace/oss/Mock/src/main/java/in/saifali/MockUtil.java+ +(/
-%10java.lang.String"0java.lang.String#toLowerCase()Ljava/lang/String;*
-
-%9java.lang.String2toLowerCase()åâ
-O
-E/Users/saif/workplace/oss/Mock/src/main/java/in/saifali/MockUtil.java+ +(B
-%11boolean"4java.lang.String#contains(Ljava/lang/CharSequence;)Z*
-
-%10java.lang.String*
-
-string2"contains(Ljava/lang/CharSequence;)*
-14
-10*î
-4O
-E/Users/saif/workplace/oss/Mock/src/main/java/in/saifali/MockUtil.java< <(ÍÊ
-O
-E/Users/saif/workplace/oss/Mock/src/main/java/in/saifali/MockUtil.java< <(
-%36java.lang.String"3java.lang.reflect.Field#getName()Ljava/lang/String;*
-
-xjava.lang.reflect.Field2	getName()š
-—
-O
-E/Users/saif/workplace/oss/Mock/src/main/java/in/saifali/MockUtil.java<! <(*
-%37long"in.saifali.MockUtil#getLong()J*"
-in.saifali.MockUtil¥¢
-O
-E/Users/saif/workplace/oss/Mock/src/main/java/in/saifali/MockUtil.java< <(+
-%38java.lang.Object"Ijava.util.Map#put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;*
-
-mapjava.util.Map*
-
-%36java.lang.String*
-
-%37long2)put(Ljava/lang/Object;Ljava/lang/Object;)*
-3*ô
-16O
-E/Users/saif/workplace/oss/Mock/src/main/java/in/saifali/MockUtil.java) )(ÌÉ
-O
-E/Users/saif/workplace/oss/Mock/src/main/java/in/saifali/MockUtil.java) )(
-%5java.lang.String"3java.lang.reflect.Field#getName()Ljava/lang/String;*
-
-xjava.lang.reflect.Field2	getName()Ÿ
-œ
-O
-E/Users/saif/workplace/oss/Mock/src/main/java/in/saifali/MockUtil.java)! )(-
-%6boolean"!in.saifali.MockUtil#getBoolean()Z*"
-in.saifali.MockUtil¥¢
-O
-E/Users/saif/workplace/oss/Mock/src/main/java/in/saifali/MockUtil.java) )(.
-%7java.lang.Object"Ijava.util.Map#put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;*
-
-mapjava.util.Map*
-
-%5java.lang.String*
-
-%6boolean2)put(Ljava/lang/Object;Ljava/lang/Object;)*
-15*ž
+cin.saifali.MockUtil#getMockData(Ljava/lang/Class;Ljava/util/Map;Ljava/util/List;)Ljava/lang/Object;
+__unknown_file ("12*³
 5O
-E/Users/saif/workplace/oss/Mock/src/main/java/in/saifali/MockUtil.java; ;(ËÈ
+E/Users/saif/workplace/oss/Mock/src/main/java/in/saifali/MockUtil.java( ((*"]
 O
-E/Users/saif/workplace/oss/Mock/src/main/java/in/saifali/MockUtil.java; ;(
-%32java.lang.Class"2java.lang.reflect.Field#getType()Ljava/lang/Class;*
-
-xjava.lang.reflect.Field2	getType()¿¼
-O
-E/Users/saif/workplace/oss/Mock/src/main/java/in/saifali/MockUtil.java; ;(!
-%33java.lang.String"+java.lang.Class#getName()Ljava/lang/String;*
-
-%32java.lang.Class2	getName()ÉÆ
-O
-E/Users/saif/workplace/oss/Mock/src/main/java/in/saifali/MockUtil.java; ;(/
-%34java.lang.String"0java.lang.String#toLowerCase()Ljava/lang/String;*
-
-%33java.lang.String2toLowerCase()ãà
-O
-E/Users/saif/workplace/oss/Mock/src/main/java/in/saifali/MockUtil.java; ;(@
-%35boolean"4java.lang.String#contains(Ljava/lang/CharSequence;)Z*
-
-%34java.lang.String*
-long2"contains(Ljava/lang/CharSequence;)*
-4
-0*ð
-17O
-E/Users/saif/workplace/oss/Mock/src/main/java/in/saifali/MockUtil.java' '(	ÐÍ
-O
-E/Users/saif/workplace/oss/Mock/src/main/java/in/saifali/MockUtil.java' '(
-
-%0void"4java.lang.reflect.AccessibleObject#setAccessible(Z)V*
-
-xjava.lang.reflect.Field*
-""2setAccessible(Z)ÊÇ
-O
-E/Users/saif/workplace/oss/Mock/src/main/java/in/saifali/MockUtil.java( ((
-%1java.lang.Class"2java.lang.reflect.Field#getType()Ljava/lang/Class;*
-
-xjava.lang.reflect.Field2	getType()½º
-O
-E/Users/saif/workplace/oss/Mock/src/main/java/in/saifali/MockUtil.java( ((!
-%2java.lang.String"+java.lang.Class#getName()Ljava/lang/String;*
-
-%1java.lang.Class2	getName()ÇÄ
-O
-E/Users/saif/workplace/oss/Mock/src/main/java/in/saifali/MockUtil.java( ((/
-%3java.lang.String"0java.lang.String#toLowerCase()Ljava/lang/String;*
-
-%2java.lang.String2toLowerCase()äá
-O
-E/Users/saif/workplace/oss/Mock/src/main/java/in/saifali/MockUtil.java( ((C
-%4boolean"4java.lang.String#contains(Ljava/lang/CharSequence;)Z*
-
-%3java.lang.String*	
-boolean2"contains(Ljava/lang/CharSequence;)*
-15
-16*¦
-8O
-E/Users/saif/workplace/oss/Mock/src/main/java/in/saifali/MockUtil.java6 6( Ê
-Ç
-O
-E/Users/saif/workplace/oss/Mock/src/main/java/in/saifali/MockUtil.java6 6(0
-%27void"rin.saifali.MockUtil#getDefaultValues(Ljava/lang/Class;Ljava/util/Map;Ljava/lang/Object;Ljava/lang/reflect/Field;)V*"
-in.saifali.MockUtil*
-
-tjava.lang.Class*
-
-mapjava.util.Map*
+E/Users/saif/workplace/oss/Mock/src/main/java/in/saifali/MockUtil.java( ((*
 
 
-clzT*
-
-xjava.lang.reflect.Field*
-5*ï
-9O
-E/Users/saif/workplace/oss/Mock/src/main/java/in/saifali/MockUtil.java4 4(ÍÊ
+%10T*Å
+6O
+E/Users/saif/workplace/oss/Mock/src/main/java/in/saifali/MockUtil.java' '(+Ž
+‹
 O
-E/Users/saif/workplace/oss/Mock/src/main/java/in/saifali/MockUtil.java4 4(
-%24java.lang.String"3java.lang.reflect.Field#getName()Ljava/lang/String;*
-
-xjava.lang.reflect.Field2	getName()œ
-™
-O
-E/Users/saif/workplace/oss/Mock/src/main/java/in/saifali/MockUtil.java4! 4(-
-
-%25int"!in.saifali.MockUtil#getInteger()I*"
-in.saifali.MockUtil¤¡
-O
-E/Users/saif/workplace/oss/Mock/src/main/java/in/saifali/MockUtil.java4 4(.
-%26java.lang.Object"Ijava.util.Map#put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;*
-
-mapjava.util.Map*
-
-%24java.lang.String*
-
-
-%25int2)put(Ljava/lang/Object;Ljava/lang/Object;)*
-8*¢
-10O
-E/Users/saif/workplace/oss/Mock/src/main/java/in/saifali/MockUtil.java3 3(ËÈ
-O
-E/Users/saif/workplace/oss/Mock/src/main/java/in/saifali/MockUtil.java3 3(
-%20java.lang.Class"2java.lang.reflect.Field#getType()Ljava/lang/Class;*
-
-xjava.lang.reflect.Field2	getType()¿¼
-O
-E/Users/saif/workplace/oss/Mock/src/main/java/in/saifali/MockUtil.java3 3(!
-%21java.lang.String"+java.lang.Class#getName()Ljava/lang/String;*
+E/Users/saif/workplace/oss/Mock/src/main/java/in/saifali/MockUtil.java' '(+
+jsonjava.lang.String"__id*
 
-%20java.lang.Class2	getName()ÉÆ
+%8java.lang.String 
+
 O
-E/Users/saif/workplace/oss/Mock/src/main/java/in/saifali/MockUtil.java3 3(/
-%22java.lang.String"0java.lang.String#toLowerCase()Ljava/lang/String;*
+E/Users/saif/workplace/oss/Mock/src/main/java/in/saifali/MockUtil.java( ((
+%9com.google.gson.Gson"__id*(*&
+in.saifali.MockUtilActions"
+gsonµ²
+O
+E/Users/saif/workplace/oss/Mock/src/main/java/in/saifali/MockUtil.java( (()
+%10T"Tcom.google.gson.Gson#fromJson(Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;*
+
+%9com.google.gson.Gson*
+
+jsonjava.lang.String*
+
+tjava.lang.Class2-fromJson(Ljava/lang/String;Ljava/lang/Class;)*
+5*€
+7O
+E/Users/saif/workplace/oss/Mock/src/main/java/in/saifali/MockUtil.java' '( 
+
+O
+E/Users/saif/workplace/oss/Mock/src/main/java/in/saifali/MockUtil.java' '(
+%7com.google.gson.Gson"__id*(*&
+in.saifali.MockUtilActions"
+gsonþ
+O
+E/Users/saif/workplace/oss/Mock/src/main/java/in/saifali/MockUtil.java' '(*
+%8java.lang.String"Acom.google.gson.Gson#toJson(Ljava/lang/Object;)Ljava/lang/String;*
+
+%7com.google.gson.Gson*
+
+mapjava.util.Map2toJson(Ljava/lang/Object;)*
+6*Õ
+8O
+E/Users/saif/workplace/oss/Mock/src/main/java/in/saifali/MockUtil.java& &(ù
+ö
+O
+E/Users/saif/workplace/oss/Mock/src/main/java/in/saifali/MockUtil.java& &(!
+
+%6void"Hin.saifali.MockUtilActions#setUserValue(Ljava/util/Map;Ljava/util/Map;)V*"
+in.saifali.MockUtilActions*
+
+kvjava.util.Map*
+
+mapjava.util.Map*
+7*Î
+9O
+E/Users/saif/workplace/oss/Mock/src/main/java/in/saifali/MockUtil.java! %(òï
+O
+E/Users/saif/workplace/oss/Mock/src/main/java/in/saifali/MockUtil.java  %(
+
+%5void"?java.util.stream.Stream#forEach(Ljava/util/function/Consumer;)V*
+
+%4java.util.stream.Stream*
+""2&forEach(Ljava/util/function/Consumer;)*
+8*ž
+10O
+E/Users/saif/workplace/oss/Mock/src/main/java/in/saifali/MockUtil.java ($n
+l
+O
+E/Users/saif/workplace/oss/Mock/src/main/java/in/saifali/MockUtil.java ($
+clzT"__id*	
+
+%3TÑÎ
+O
+E/Users/saif/workplace/oss/Mock/src/main/java/in/saifali/MockUtil.java   (
+%4java.util.stream.Stream"6java.util.Collection#stream()Ljava/util/stream/Stream;*
+
+fieldsjava.util.List2stream()*
+9*“
+11O
+E/Users/saif/workplace/oss/Mock/src/main/java/in/saifali/MockUtil.java (µ²
+O
+E/Users/saif/workplace/oss/Mock/src/main/java/in/saifali/MockUtil.java (#
+%3T"/java.lang.Class#newInstance()Ljava/lang/Object;*
+
+tjava.lang.Class2newInstance()*
+10*¦
+12O
+E/Users/saif/workplace/oss/Mock/src/main/java/in/saifali/MockUtil.java" (1}
+O
+E/Users/saif/workplace/oss/Mock/src/main/java/in/saifali/MockUtil.java& (/
+%0java.util.HashMap"java.util.HashMap’
+
+O
+E/Users/saif/workplace/oss/Mock/src/main/java/in/saifali/MockUtil.java" (1
+%1"java.util.HashMap#<init>()V*
 
-%21java.lang.String2toLowerCase()æã
+%0java.util.HashMap‹
+ˆ
 O
-E/Users/saif/workplace/oss/Mock/src/main/java/in/saifali/MockUtil.java3 3(C
-%23boolean"4java.lang.String#contains(Ljava/lang/CharSequence;)Z*
+E/Users/saif/workplace/oss/Mock/src/main/java/in/saifali/MockUtil.java (2
+mapjava.util.Map"__id*
 
-%22java.lang.String*	
-integer2"contains(Ljava/lang/CharSequence;)*
-5
-9*m
-0 "f
+%0java.util.HashMap•
+’
 O
-E/Users/saif/workplace/oss/Mock/src/main/java/in/saifali/MockUtil.javaC C(
-implicit return:
-tjava.lang.Class:
-mapjava.util.Map:
-clzT:
-xjava.lang.reflect.FieldB"
+E/Users/saif/workplace/oss/Mock/src/main/java/in/saifali/MockUtil.java (/
+%2java.util.List"Win.saifali.MockUtilActions#getFields(Ljava/lang/Class;Ljava/util/List;)Ljava/util/List;*"
+in.saifali.MockUtilActions*
+
+tjava.lang.Class*
+
+skipjava.util.ListŒ
+‰
+O
+E/Users/saif/workplace/oss/Mock/src/main/java/in/saifali/MockUtil.java (0
+fieldsjava.util.List"__id*
+
+%2java.util.List*
+11:
+tjava.lang.Class:
+kvjava.util.Map:
+skipjava.util.ListB"
 in.saifali.MockUtil

@@ -1,16 +1,28 @@
 package in.saifali;
 
-import com.google.gson.Gson;
-
 import java.lang.reflect.Field;
 import java.util.*;
 import java.util.logging.Level;
-import java.util.logging.Logger;
-import java.util.stream.Collectors;
 
-public class MockUtil {
-    static Logger log = Logger.getLogger(MockUtil.class.getName());
-    static Gson gson = new Gson();
+/**
+ * @author saif
+ * @version 0.01
+ * @since
+ */
+public class MockUtil extends MockUtilActions {
+
+    private MockUtil() {
+        throw new IllegalStateException("Utility class");
+    }
+
+    /**
+     * @param {class}        t
+     * @param {Map<String,   Object>} kv
+     * @param {List<String>} skip
+     * @param <T>
+     * @return the <T>
+     */
+
 
     public static <T> T getMockData(Class<T> t, Map<String, Object> kv, List<String> skip) {
         Map<String, Object> map = new HashMap<>();
@@ -23,10 +35,7 @@ public class MockUtil {
                             getFieldsByType(t, map, clz, x);
                         }
                     });
-
-            if(kv!=null)
-                map.putAll(kv);
-
+            setUserValue(kv, map);
             String json = gson.toJson(map);
             return gson.fromJson(json, t);
         } catch (Exception e) {
@@ -35,76 +44,26 @@ public class MockUtil {
         }
     }
 
-    private static <T> void getFieldsByType(Class<T> t, Map<String, Object> map, T clz, Field x) {
-        x.setAccessible(true);
-        if (x.getType().getName().toLowerCase().contains("boolean")) {
-            map.put(x.getName(), getBoolean());
-        }
-        if (x.getType().getName().toLowerCase().contains("string")) {
-            map.put(x.getName(), getString());
-            try {
-                getDefaultValues(t, map, clz, x);
-            } catch (Exception e) {
-                log.log(Level.WARNING, e.toString());
-            }
-        }
-        if (x.getType().getName().toLowerCase().contains("integer")) {
-            map.put(x.getName(), getInteger());
-            try {
-                getDefaultValues(t, map, clz, x);
-            } catch (Exception e) {
-                log.log(Level.WARNING, e.toString());
-            }
-        }
-        if (x.getType().getName().toLowerCase().contains("long")) {
-            map.put(x.getName(), getLong());
-            try {
-                getDefaultValues(t, map, clz, x);
-            } catch (Exception e) {
-                log.log(Level.WARNING, e.toString());
-            }
-        }
+    public static <T> T getMockData(Class<T> t, String stringKv, String skipList) {
+        Map<String, Object> kv = gson.fromJson(stringKv, typeMap);
+        List<String> skip = gson.fromJson(skipList, typeList);
+        return getMockData(t, kv, skip);
     }
 
-    private static <T> void getDefaultValues(Class<T> t, Map<String, Object> map, T clz, Field x) throws NoSuchFieldException, IllegalAccessException {
-        Field field = t.getDeclaredField(x.getName());
-        field.setAccessible(true);
-        Object value = field.get(clz);
-        if(value!=null)
-            map.put(x.getName(), value);
+    public static <T> T getMockData(Class<T> t, Map<String, Object> kv) {
+        return getMockData(t, kv, null);
     }
 
-    private static <T> List<Field> getFields(Class<T> t, List<String> skip) {
-        List<Field> fields = Arrays.asList(t.getDeclaredFields());
-
-        if (skip != null) {
-            fields = fields.stream()
-                    .filter(x -> !skip.contains(x.getName()))
-                    .collect(Collectors.toList());
-        }
-        return fields;
+    public static <T> T getMockData(Class<T> t, List<String> skip) {
+        return getMockData(t, null, skip);
     }
 
-    public static List<String> allowedType() {
-        String[] allowed = {"java.lang.String", "java.lang.Boolean", "java.lang.Integer", "java.lang.Long",
-                "boolean"};
-        return Arrays.asList(allowed);
+    public static <T> T getMockData(Class<T> t) {
+        return getMockData(t, "", "");
     }
 
-    public static String getString() {
-        return UUID.randomUUID().toString();
-    }
-
-    public static int getInteger() {
-        return new Random().nextInt((1000) + 1) + 100000;
-    }
-
-    public static long getLong() {
-        return new Random().nextLong() + 100000L;
-    }
-
-    public static boolean getBoolean() {
-        return System.nanoTime() % 2 != 0;
+    public static <T> T getMockData(Class<T> t, String... stringKv) {
+        return getMockData(t, null, Arrays.asList(stringKv));
     }
 
 }

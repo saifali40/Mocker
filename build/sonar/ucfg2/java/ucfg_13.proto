@@ -1,0 +1,25 @@
+
+(in.saifali.MockUtilActions#getInteger()I
+__unknown_file ("1*”
+1V
+L/Users/saif/workplace/oss/Mock/src/main/java/in/saifali/MockUtilActions.javaU U(…‚
+V
+L/Users/saif/workplace/oss/Mock/src/main/java/in/saifali/MockUtilActions.javaU U(
+%0java.util.Random"java.util.Random—
+”
+V
+L/Users/saif/workplace/oss/Mock/src/main/java/in/saifali/MockUtilActions.javaU U(
+%1"java.util.Random#<init>()V*
+
+%0java.util.Random²¯
+V
+L/Users/saif/workplace/oss/Mock/src/main/java/in/saifali/MockUtilActions.javaU U(/	
+%2int"java.util.Random#nextInt(I)I*
+
+%0java.util.Random*
+""2
+nextInt(I)"`
+V
+L/Users/saif/workplace/oss/Mock/src/main/java/in/saifali/MockUtilActions.javaU U(9
+""B"
+in.saifali.MockUtilActions
