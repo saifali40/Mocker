@@ -10,6 +10,11 @@ import java.util.stream.Collectors;
 
 public class MockUtilActions {
 
+
+    protected MockUtilActions(){
+        throw new IllegalStateException("Utility class");
+    }
+
     static Logger log = Logger.getLogger(MockUtil.class.getName());
     static Gson gson = new Gson();
 
@@ -28,27 +33,23 @@ public class MockUtilActions {
         }
         if (x.getType().getName().toLowerCase().contains("string")) {
             map.put(x.getName(), getString());
-            try {
-                getDefaultValues(t, map, clz, x);
-            } catch (Exception e) {
-                log.log(Level.WARNING, e.toString());
-            }
+            getDefaultValue(t, map, clz, x);
         }
         if (x.getType().getName().toLowerCase().contains("integer")) {
             map.put(x.getName(), getInteger());
-            try {
-                getDefaultValues(t, map, clz, x);
-            } catch (Exception e) {
-                log.log(Level.WARNING, e.toString());
-            }
+            getDefaultValue(t, map, clz, x);
         }
         if (x.getType().getName().toLowerCase().contains("long")) {
             map.put(x.getName(), getLong());
-            try {
-                getDefaultValues(t, map, clz, x);
-            } catch (Exception e) {
-                log.log(Level.WARNING, e.toString());
-            }
+            getDefaultValue(t, map, clz, x);
+        }
+    }
+
+    private static <T> void getDefaultValue(Class<T> t, Map<String, Object> map, T clz, Field x) {
+        try {
+            getDefaultValues(t, map, clz, x);
+        } catch (Exception e) {
+            log.log(Level.WARNING, e.toString());
         }
     }
 

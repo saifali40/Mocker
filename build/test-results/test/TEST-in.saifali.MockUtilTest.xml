@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="in.saifali.MockUtilTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2019-02-24T17:18:15" hostname="full023-prt" time="0.148">
+<testsuite name="in.saifali.MockUtilTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2019-02-24T17:52:07" hostname="full023-prt" time="0.308">
   <properties/>
-  <testcase name="getMockData_withKv" classname="in.saifali.MockUtilTest" time="0.135"/>
-  <testcase name="getMockData_withList" classname="in.saifali.MockUtilTest" time="0.011"/>
+  <testcase name="getMockData_withoutNoAdditionalParam" classname="in.saifali.MockUtilTest" time="0.278"/>
+  <testcase name="getMockData_withKv" classname="in.saifali.MockUtilTest" time="0.012"/>
+  <testcase name="getMockData_withList" classname="in.saifali.MockUtilTest" time="0.012"/>
+  <testcase name="getMockData_withMap" classname="in.saifali.MockUtilTest" time="0.001"/>
+  <testcase name="getMockDataWithAll" classname="in.saifali.MockUtilTest" time="0.002"/>
   <testcase name="getMockData_withoutKvandList" classname="in.saifali.MockUtilTest" time="0.001"/>
-  <testcase name="getStringCheck" classname="in.saifali.MockUtilTest" time="0.0"/>
+  <testcase name="getStringCheck" classname="in.saifali.MockUtilTest" time="0.001"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

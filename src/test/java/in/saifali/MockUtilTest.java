@@ -34,4 +34,27 @@ public class MockUtilTest {
     public void getMockData_withList() {
         assertNotNull(MockUtil.getMockData(TestModel.class, "", "[string]"));
     }
+
+    @Test
+    public void getMockData_withoutNoAdditionalParam() {
+        assertNotNull(MockUtil.getMockData(TestModel.class));
+    }
+
+    @Test
+    public void getMockData_withMap() {
+        Map<String,Object> map = new HashMap<>();
+        map.put("string","noString");
+        assertNotNull(MockUtil.getMockData(TestModel.class,map));
+    }
+
+    @Test
+    public void  getMockDataWithAll(){
+        assertNotNull(MockUtil.getMockData(TestModel.class, "{string:string}", "[nodate]"));
+    }
+
+    public void getMock_withList(){
+        List<String> list = new ArrayList<>();
+        list.add("nodate");
+        assertNotNull(MockUtil.getMockData(TestModel.class, list));
+    }
 }

@@ -1,21 +1,67 @@
 
-8in.saifali.MockUtilActions#getString()Ljava/lang/String;
-__unknown_file ("1*À
-1V
-L/Users/saif/workplace/oss/Mock/src/main/java/in/saifali/MockUtilActions.javaQ Q(≤
-Ø
+Win.saifali.MockUtilActions#getFields(Ljava/lang/Class;Ljava/util/List;)Ljava/util/List;
+__unknown_file ("3*å
+
+2V
+L/Users/saif/workplace/oss/Mock/src/main/java/in/saifali/MockUtilActions.javaD D(ÿ’
 V
-L/Users/saif/workplace/oss/Mock/src/main/java/in/saifali/MockUtilActions.javaQ Q( 
-%0java.util.UUID"+java.util.UUID#randomUUID()Ljava/util/UUID;*"
-java.util.UUIDƒ¡
+L/Users/saif/workplace/oss/Mock/src/main/java/in/saifali/MockUtilActions.javaD D($
+%2java.util.stream.Stream"6java.util.Collection#stream()Ljava/util/stream/Stream;*
+
+fieldsjava.util.List2stream()§°
 V
-L/Users/saif/workplace/oss/Mock/src/main/java/in/saifali/MockUtilActions.javaQ Q(+
-%1java.lang.String"+java.util.UUID#toString()Ljava/lang/String;*
+L/Users/saif/workplace/oss/Mock/src/main/java/in/saifali/MockUtilActions.javaD E(=
+%3java.util.stream.Stream"Wjava.util.stream.Stream#filter(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;*
+
+%2java.util.stream.Stream*
+""2&filter(Ljava/util/function/Predicate;)‡
+›
+V
+L/Users/saif/workplace/oss/Mock/src/main/java/in/saifali/MockUtilActions.javaF F(0 
+%4java.util.stream.Collector"@java.util.stream.Collectors#toList()Ljava/util/stream/Collector;*"
+java.util.stream.CollectorsÆ´
+V
+L/Users/saif/workplace/oss/Mock/src/main/java/in/saifali/MockUtilActions.javaD F(1
+%5java.util.List"Ojava.util.stream.Stream#collect(Ljava/util/stream/Collector;)Ljava/lang/Object;*
+
+%3java.util.stream.Stream*"
+ 
+%4java.util.stream.Collector2%collect(Ljava/util/stream/Collector;)ì
+ê
+V
+L/Users/saif/workplace/oss/Mock/src/main/java/in/saifali/MockUtilActions.javaD F(1
+fieldsjava.util.List"__id*
 
-%0java.util.UUID2
-toString()"r
+%5java.util.List*
+1*©
+3V
+L/Users/saif/workplace/oss/Mock/src/main/java/in/saifali/MockUtilActions.javaA A(#’“
 V
-L/Users/saif/workplace/oss/Mock/src/main/java/in/saifali/MockUtilActions.javaQ Q(,
-
-%1java.lang.StringB"
+L/Users/saif/workplace/oss/Mock/src/main/java/in/saifali/MockUtilActions.javaA+ A(@
+%0$Array"=java.lang.Class#getDeclaredFields()[Ljava/lang/reflect/Field;*
+
+tjava.lang.Class2getDeclaredFields()’
+“
+V
+L/Users/saif/workplace/oss/Mock/src/main/java/in/saifali/MockUtilActions.javaA A(A
+%1java.util.List"<java.util.Arrays#asList([Ljava/lang/Object;)Ljava/util/List;*"
+java.util.Arrays*
+
+%0$Arrayì
+ê
+V
+L/Users/saif/workplace/oss/Mock/src/main/java/in/saifali/MockUtilActions.javaA A(B
+fieldsjava.util.List"__id*
+
+%1java.util.List*
+2
+1*—
+1V
+L/Users/saif/workplace/oss/Mock/src/main/java/in/saifali/MockUtilActions.javaH H("t
+V
+L/Users/saif/workplace/oss/Mock/src/main/java/in/saifali/MockUtilActions.javaH H(
+
+fieldsjava.util.List:
+tjava.lang.Class:
+skipjava.util.ListB"
 in.saifali.MockUtilActions

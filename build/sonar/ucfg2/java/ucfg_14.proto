@@ -1,25 +1,21 @@
 
-%in.saifali.MockUtilActions#getLong()J
-__unknown_file ("1*ç
+8in.saifali.MockUtilActions#getString()Ljava/lang/String;
+__unknown_file ("1*À
 1V
-L/Users/saif/workplace/oss/Mock/src/main/java/in/saifali/MockUtilActions.javaY Y(ÖÇ
+L/Users/saif/workplace/oss/Mock/src/main/java/in/saifali/MockUtilActions.javaR R(≤
+Ø
 V
-L/Users/saif/workplace/oss/Mock/src/main/java/in/saifali/MockUtilActions.javaY Y(
-%0java.util.Random"java.util.Randomó
-î
+L/Users/saif/workplace/oss/Mock/src/main/java/in/saifali/MockUtilActions.javaR R( 
+%0java.util.UUID"+java.util.UUID#randomUUID()Ljava/util/UUID;*"
+java.util.UUIDƒ¡
 V
-L/Users/saif/workplace/oss/Mock/src/main/java/in/saifali/MockUtilActions.javaY Y(
-%1"java.util.Random#<init>()V*
+L/Users/saif/workplace/oss/Mock/src/main/java/in/saifali/MockUtilActions.javaR R(+
+%1java.lang.String"+java.util.UUID#toString()Ljava/lang/String;*
+
+%0java.util.UUID2
+toString()"r
+V
+L/Users/saif/workplace/oss/Mock/src/main/java/in/saifali/MockUtilActions.javaR R(,
 
-%0java.util.Random´®
-V
-L/Users/saif/workplace/oss/Mock/src/main/java/in/saifali/MockUtilActions.javaY Y(&
-
-%2long"java.util.Random#nextLong()J*
-
-%0java.util.Random2
-nextLong()"`
-V
-L/Users/saif/workplace/oss/Mock/src/main/java/in/saifali/MockUtilActions.javaY Y(1
-""B"
+%1java.lang.StringB"
 in.saifali.MockUtilActions
