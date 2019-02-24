@@ -20,27 +20,7 @@ public class MockUtil {
             fields.stream()
                     .forEach(x -> {
                         if (allowedType().contains(x.getType().getName())) {
-                            x.setAccessible(true);
-                            if (x.getType().getName().toLowerCase().contains("boolean")) {
-                                map.put(x.getName(), getBoolean());
-                            }
-                            if (x.getType().getName().toLowerCase().contains("string")) {
-                                map.put(x.getName(), getString());
-                                try {
-                                    Field field = t.getDeclaredField(x.getName());
-                                    field.setAccessible(true);
-                                    String value = (String) field.get(clz);
-                                    map.put(x.getName(),value);
-                                }catch (Exception e){
-                                    log.log(Level.WARNING, e.toString());
-                                }
-                            }
-                            if (x.getType().getName().toLowerCase().contains("integer")) {
-                                map.put(x.getName(), getInteger());
-                            }
-                            if (x.getType().getName().toLowerCase().contains("long")) {
-                                map.put(x.getName(), getLong());
-                            }
+                            getFieldsByType(t, map, clz, x);
                         }
                     });
             map.putAll(kv);
@@ -50,6 +30,45 @@ public class MockUtil {
             log.log(Level.WARNING, e.toString());
             throw new IllegalArgumentException();
         }
+    }
+
+    private <T> void getFieldsByType(Class<T> t, Map<String, Object> map, T clz, Field x) {
+        x.setAccessible(true);
+        if (x.getType().getName().toLowerCase().contains("boolean")) {
+            map.put(x.getName(), getBoolean());
+        }
+        if (x.getType().getName().toLowerCase().contains("string")) {
+            map.put(x.getName(), getString());
+            try {
+                getDefaultValues(t, map, clz, x);
+            } catch (Exception e) {
+                log.log(Level.WARNING, e.toString());
+            }
+        }
+        if (x.getType().getName().toLowerCase().contains("integer")) {
+            map.put(x.getName(), getInteger());
+            try {
+                getDefaultValues(t, map, clz, x);
+            } catch (Exception e) {
+                log.log(Level.WARNING, e.toString());
+            }
+        }
+        if (x.getType().getName().toLowerCase().contains("long")) {
+            map.put(x.getName(), getLong());
+            try {
+                getDefaultValues(t, map, clz, x);
+            } catch (Exception e) {
+                log.log(Level.WARNING, e.toString());
+            }
+        }
+    }
+
+    private <T> void getDefaultValues(Class<T> t, Map<String, Object> map, T clz, Field x) throws NoSuchFieldException, IllegalAccessException {
+        Field field = t.getDeclaredField(x.getName());
+        field.setAccessible(true);
+        Object value = field.get(clz);
+        if(value!=null)
+            map.put(x.getName(), value);
     }
 
     private <T> List<Field> getFields(Class<T> t, List<String> skip) {
