@@ -11,21 +11,16 @@ import java.util.List;
 import java.util.Map;
 
 import static org.junit.Assert.assertNotEquals;
+import static org.junit.Assert.assertNotNull;
 
 @RunWith(JUnit4.class)
-public class MockUtilTest extends MockUtil {
-
+public class MockUtilTest{
     @Test
     public void getStringCheck(){
-        assertNotEquals("getString",getString());
+        assertNotEquals("getString",MockUtil.getString());
     }
-
     @Test
     public void testObject(){
-        Map<String, Object> kv = new HashMap<>();
-        kv.put("stringwithValue","ABCD");
-        List<String> skip = new ArrayList<>();
-        getMockData(TestModel.class,kv,skip);
+        assertNotNull(MockUtil.getMockData(TestModel.class,null,null));
     }
-
 }

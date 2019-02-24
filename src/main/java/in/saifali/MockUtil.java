@@ -10,9 +10,9 @@ import java.util.stream.Collectors;
 
 public class MockUtil {
     static Logger log = Logger.getLogger(MockUtil.class.getName());
-    Gson gson = new Gson();
+    static Gson gson = new Gson();
 
-    public <T> T getMockData(Class<T> t, Map<String, Object> kv, List<String> skip) {
+    public static <T> T getMockData(Class<T> t, Map<String, Object> kv, List<String> skip) {
         Map<String, Object> map = new HashMap<>();
         List<Field> fields = getFields(t, skip);
         try {
@@ -23,7 +23,10 @@ public class MockUtil {
                             getFieldsByType(t, map, clz, x);
                         }
                     });
-            map.putAll(kv);
+
+            if(kv!=null)
+                map.putAll(kv);
+
             String json = gson.toJson(map);
             return gson.fromJson(json, t);
         } catch (Exception e) {
@@ -32,7 +35,7 @@ public class MockUtil {
         }
     }
 
-    private <T> void getFieldsByType(Class<T> t, Map<String, Object> map, T clz, Field x) {
+    private static <T> void getFieldsByType(Class<T> t, Map<String, Object> map, T clz, Field x) {
         x.setAccessible(true);
         if (x.getType().getName().toLowerCase().contains("boolean")) {
             map.put(x.getName(), getBoolean());
@@ -63,7 +66,7 @@ public class MockUtil {
         }
     }
 
-    private <T> void getDefaultValues(Class<T> t, Map<String, Object> map, T clz, Field x) throws NoSuchFieldException, IllegalAccessException {
+    private static <T> void getDefaultValues(Class<T> t, Map<String, Object> map, T clz, Field x) throws NoSuchFieldException, IllegalAccessException {
         Field field = t.getDeclaredField(x.getName());
         field.setAccessible(true);
         Object value = field.get(clz);
@@ -71,7 +74,7 @@ public class MockUtil {
             map.put(x.getName(), value);
     }
 
-    private <T> List<Field> getFields(Class<T> t, List<String> skip) {
+    private static <T> List<Field> getFields(Class<T> t, List<String> skip) {
         List<Field> fields = Arrays.asList(t.getDeclaredFields());
 
         if (skip != null) {
@@ -82,7 +85,7 @@ public class MockUtil {
         return fields;
     }
 
-    public List<String> allowedType() {
+    public static List<String> allowedType() {
         String[] allowed = {"java.lang.String", "java.lang.Boolean", "java.lang.Integer", "java.lang.Long",
                 "boolean"};
         return Arrays.asList(allowed);

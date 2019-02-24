@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="in.saifali.MockUtilTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2019-02-24T15:40:53" hostname="full023-prt" time="0.051">
+<testsuite name="in.saifali.MockUtilTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2019-02-24T16:24:15" hostname="full023-prt" time="0.085">
   <properties/>
-  <testcase name="testObject" classname="in.saifali.MockUtilTest" time="0.05"/>
+  <testcase name="testObject" classname="in.saifali.MockUtilTest" time="0.084"/>
   <testcase name="getStringCheck" classname="in.saifali.MockUtilTest" time="0.0"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
