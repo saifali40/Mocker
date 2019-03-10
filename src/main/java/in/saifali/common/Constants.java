@@ -2,6 +2,8 @@ package in.saifali.common;
 
 public class Constants {
 
+    protected Constants(){}
+
     public static final String UTILITY_CLASS = "Utility class";
     public static final String BOOLEAN = "boolean";
     public static final String STRING = "string";

@@ -23,12 +23,11 @@ public class MockUtil extends MockUtilActions {
      * @return the classObject
      */
     public static <T> T getMockData(Class<T> t, Map<String, Object> kv, List<String> skip) {
-        Map<String, Object> map = new HashMap<>();
-        List<Field> fields = getFields(t, skip);
         try {
+            Map<String, Object> map = new HashMap<>();
+            List<Field> fields = getFields(t, skip);
             T clz = t.newInstance();
-            fields.stream()
-                    .forEach(x -> getFieldsByType(t, map, clz, x));
+            fields.forEach(x -> getFieldsByType(t, map, clz, x));
             setUserValue(kv, map);
             String json = gson.toJson(map);
             return gson.fromJson(json, t);

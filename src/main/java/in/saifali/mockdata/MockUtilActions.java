@@ -121,7 +121,7 @@ public class MockUtilActions extends Constants {
             retVal.add(randomLong.getAsLong());
 
         return retVal;
-    };
+    }
 
     protected static List randomList(Type key){
         List retVal = new ArrayList();
@@ -138,7 +138,7 @@ public class MockUtilActions extends Constants {
             retVal.add(randomLong.getAsLong());
 
         return retVal;
-    };
+    }
 
     private static Object randomMap(Type key, Type value) {
         Map retVal = new HashMap();
@@ -171,7 +171,7 @@ public class MockUtilActions extends Constants {
 
 
         return retVal;
-    };
+    }
 
 
 }

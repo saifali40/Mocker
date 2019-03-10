@@ -62,4 +62,11 @@ public class MockUtilTest {
         list.add("nodate");
         assertNotNull(MockUtil.getMockData(TestModel.class, list));
     }
+
+
+    @Test(expected = Exception.class)
+    public void getMock_exception(){
+        List<String> list = new ArrayList<>();
+        assertNotNull(MockUtil.getMockData(null, list));
+    }
 }

@@ -13,17 +13,12 @@ public class TestModel{
 	private String stringbooleanValue = "True";
 
 	Set<String> setwithouvalue;
-	HashSet<String> hashsetnoValue;
-
-	HashSet<String> setwithoutvalueintialized = new HashSet<>();
-
+	Set<String> hashsetnoValue;
+	Set<String> setwithoutvalueintialized = new HashSet<>();
 	Set<String> setWithvalueintialized = getSet();
-
 	Set<Integer> setWithvalueintializedinteger = getSetInteger();
-
-	List<Integer> integer;
-
 	Map<String, Boolean> demo;
+
 
 	private Integer novalueint;
 
@@ -49,6 +44,21 @@ public class TestModel{
 		retVal.add(2);
 		return retVal;
 	}
+
+	Map<Boolean, Boolean> boolMap;
+	Map<String, String> strMap;
+	Map<Integer, Integer> intMap;
+	Map<Long, Long> longMap;
+
+	Set<Boolean> boolSet;
+	Set<String> strSet;
+	Set<Integer> intSet;
+	Set<Long> longSet;
+
+	List<Boolean> boolList;
+	List<String> strList;
+	List<Integer> intList;
+	List<Long> longList;
 
 }
 	
