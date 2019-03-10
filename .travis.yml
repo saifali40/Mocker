@@ -11,4 +11,4 @@ script:
       -Dsonar.projectKey=saifali40_Mocker \
       -Dsonar.organization=saifali40-github \
       -Dsonar.host.url=https://sonarcloud.io \
-      -Dsonar.login=$SONAR_TOKEN
+      -Dsonar.login=a31d148a53b156aff158c62babeeea452654ab01
