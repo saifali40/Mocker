@@ -1,5 +1,7 @@
 package in.saifali;
 
+import in.saifali.MockData.MockUtilActions;
+
 import java.lang.reflect.Field;
 import java.util.*;
 import java.util.logging.Level;
@@ -27,9 +29,7 @@ public class MockUtil extends MockUtilActions {
             T clz = t.newInstance();
             fields.stream()
                     .forEach(x -> {
-                        if (allowedType().contains(x.getType().getName())) {
                             getFieldsByType(t, map, clz, x);
-                        }
                     });
             setUserValue(kv, map);
             String json = gson.toJson(map);
@@ -88,13 +88,12 @@ public class MockUtil extends MockUtilActions {
     }
 
     /**
-     *
      * @param t class
      * @param stringKv array of fields to skip
      * @param <T> template Class
      * @return the ClassObject
      */
-    public static <T> T getMockData(Class<T> t, String... stringKv) {
+    public static <T> T getMockDatabySkiplist(Class<T> t, String... stringKv) {
         return getMockData(t, null, Arrays.asList(stringKv));
     }
 

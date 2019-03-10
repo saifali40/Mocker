@@ -1,5 +1,6 @@
 package in.saifali;
 
+import com.google.gson.Gson;
 import in.saifali.mockmodels.TestModel;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -15,9 +16,10 @@ import static org.junit.Assert.assertNotNull;
 
 @RunWith(JUnit4.class)
 public class MockUtilTest {
+
     @Test
     public void getStringCheck() {
-        assertNotEquals("getString", MockUtil.getString());
+        assertNotEquals("", MockUtil.randomString.get());
     }
 
     @Test
@@ -32,7 +34,9 @@ public class MockUtilTest {
 
     @Test
     public void getMockData_withList() {
-        assertNotNull(MockUtil.getMockData(TestModel.class, "", "[string]"));
+        TestModel model = MockUtil.getMockData(TestModel.class, "", "[string]");
+        System.out.println(new Gson().toJson(model));
+        assertNotNull(model);
     }
 
     @Test
@@ -52,6 +56,7 @@ public class MockUtilTest {
         assertNotNull(MockUtil.getMockData(TestModel.class, "{string:string}", "[nodate]"));
     }
 
+    @Test
     public void getMock_withList(){
         List<String> list = new ArrayList<>();
         list.add("nodate");

@@ -24,7 +24,6 @@ jacoco {
 }
 
 jacocoTestReport {
-
     reports {
         html.enabled  true
     }

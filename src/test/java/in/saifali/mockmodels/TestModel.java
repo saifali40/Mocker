@@ -2,6 +2,7 @@ package in.saifali.mockmodels;
 
 import java.util.Date;
 import java.util.HashSet;
+import java.util.Map;
 import java.util.Set;
 
 public class TestModel{
@@ -15,12 +16,15 @@ public class TestModel{
 	private String stringbooleanValue = "True";
 
 	Set<String> setwithouvalue;
+	HashSet<String> hashsetnoValue;
 
-	Set<String> setwithoutvalueintialized = new HashSet<>();
+	HashSet<String> setwithoutvalueintialized = new HashSet<>();
 
 	Set<String> setWithvalueintialized = getSet();
 
 	Set<Integer> setWithvalueintializedinteger = getSetInteger();
+
+	Map<String, Boolean> demo;
 
 	private Integer novalueint;
 
