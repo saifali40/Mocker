@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="in.saifali.MockUtilTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2019-02-24T17:52:07" hostname="full023-prt" time="0.308">
+<testsuite name="in.saifali.MockUtilTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2019-03-10T15:34:01" hostname="full023-prt" time="0.438">
   <properties/>
-  <testcase name="getMockData_withoutNoAdditionalParam" classname="in.saifali.MockUtilTest" time="0.278"/>
-  <testcase name="getMockData_withKv" classname="in.saifali.MockUtilTest" time="0.012"/>
-  <testcase name="getMockData_withList" classname="in.saifali.MockUtilTest" time="0.012"/>
-  <testcase name="getMockData_withMap" classname="in.saifali.MockUtilTest" time="0.001"/>
-  <testcase name="getMockDataWithAll" classname="in.saifali.MockUtilTest" time="0.002"/>
-  <testcase name="getMockData_withoutKvandList" classname="in.saifali.MockUtilTest" time="0.001"/>
+  <testcase name="getMockData_withoutNoAdditionalParam" classname="in.saifali.MockUtilTest" time="0.312"/>
+  <testcase name="getMockData_withKv" classname="in.saifali.MockUtilTest" time="0.015"/>
+  <testcase name="getMockData_withList" classname="in.saifali.MockUtilTest" time="0.053"/>
+  <testcase name="getMockData_withMap" classname="in.saifali.MockUtilTest" time="0.006"/>
+  <testcase name="getMockDataWithAll" classname="in.saifali.MockUtilTest" time="0.004"/>
+  <testcase name="getMock_withList" classname="in.saifali.MockUtilTest" time="0.029"/>
+  <testcase name="getMockData_withoutKvandList" classname="in.saifali.MockUtilTest" time="0.009"/>
   <testcase name="getStringCheck" classname="in.saifali.MockUtilTest" time="0.001"/>
-  <system-out><![CDATA[]]></system-out>
+  <system-out><![CDATA[{"nullstrign":"cda0ebef-33e5-4f26-a9c4-18e725bab934","stringwithValue":"Active","stringbooleanValue":"True","setwithouvalue":["396612a7-fcd6-49ed-af38-b81c08867a37"],"hashsetnoValue":["f7c94ca3-3d7b-4e2d-bc2e-cf17cfd9ea3b"],"setwithoutvalueintialized":[],"setWithvalueintialized":["A","B"],"setWithvalueintializedinteger":[1,2],"integer":[100021],"demo":{"40dfb497-b4d3-402b-a246-0101149f6577":true},"novalueint":100976,"valueint":1,"novaluebool":true,"valueBool":true,"date":"Mar 10, 2019 9:04:02 PM"}
+]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

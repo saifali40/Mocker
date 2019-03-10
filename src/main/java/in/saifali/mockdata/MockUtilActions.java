@@ -1,7 +1,8 @@
-package in.saifali.MockData;
+package in.saifali.mockdata;
 
 import com.google.gson.Gson;
 import in.saifali.MockUtil;
+import in.saifali.common.Constants;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.ParameterizedType;
@@ -14,11 +15,11 @@ import java.util.logging.Logger;
 import java.util.stream.Collectors;
 
 
-public class MockUtilActions {
+public class MockUtilActions extends Constants {
 
 
     protected MockUtilActions(){
-        throw new IllegalStateException("Utility class");
+        throw new IllegalStateException(UTILITY_CLASS);
     }
 
     protected static Logger log = Logger.getLogger(MockUtil.class.getName());
@@ -35,31 +36,31 @@ public class MockUtilActions {
 
     protected static <T> void getFieldsByType(Class<T> t, Map<String, Object> map, T clz, Field x) {
         x.setAccessible(true);
-        if (x.getType().getName().toLowerCase().contains("boolean")) {
+        if (x.getType().getName().toLowerCase().contains(BOOLEAN)) {
             map.put(x.getName(), randomBool.getAsBoolean());
         }
-        if (x.getType().getName().toLowerCase().contains("string")) {
+        if (x.getType().getName().toLowerCase().contains(STRING)) {
             map.put(x.getName(), randomString.get());
         }
-        if (x.getType().getName().toLowerCase().contains("integer")) {
+        if (x.getType().getName().toLowerCase().contains(INTEGER)) {
             map.put(x.getName(), randomInt.getAsInt());
         }
-        if (x.getType().getName().toLowerCase().contains("long")) {
+        if (x.getType().getName().toLowerCase().contains(LONG)) {
             map.put(x.getName(), randomLong.getAsLong());
         }
 
-        if(x.getGenericType().getTypeName().contains("Set")){
+        if(x.getGenericType().getTypeName().contains(SET)){
             ParameterizedType type = (ParameterizedType) x.getGenericType();
             Type key = type.getActualTypeArguments()[0];
             map.put(x.getName(), randomSet(key));
         }
-        if(x.getGenericType().getTypeName().contains("Map")){
+        if(x.getGenericType().getTypeName().contains(MAP)){
             ParameterizedType type = (ParameterizedType) x.getGenericType();
             Type key = type.getActualTypeArguments()[0];
             Type value = type.getActualTypeArguments()[1];
             map.put(x.getName(), randomMap(key,value));
         }
-        if(x.getGenericType().getTypeName().contains("List")){
+        if(x.getGenericType().getTypeName().contains(LIST)){
             ParameterizedType type = (ParameterizedType) x.getGenericType();
             Type key = type.getActualTypeArguments()[0];
             map.put(x.getName(), randomList(key));
@@ -107,16 +108,16 @@ public class MockUtilActions {
 
     protected static Set randomSet(Type key){
         Set retVal = new HashSet<>();
-        if(key.getTypeName().toLowerCase().contains("boolean"))
+        if(key.getTypeName().toLowerCase().contains(BOOLEAN))
             retVal.add(randomBool.getAsBoolean());
 
-        if(key.getTypeName().toLowerCase().contains("string"))
+        if(key.getTypeName().toLowerCase().contains(STRING))
             retVal.add(randomString.get());
 
-        if(key.getTypeName().toLowerCase().contains("integer"))
+        if(key.getTypeName().toLowerCase().contains(INTEGER))
             retVal.add(randomInt.getAsInt());
 
-        if(key.getTypeName().toLowerCase().contains("long"))
+        if(key.getTypeName().toLowerCase().contains(LONG))
             retVal.add(randomLong.getAsLong());
 
         return retVal;
@@ -124,16 +125,16 @@ public class MockUtilActions {
 
     protected static List randomList(Type key){
         List retVal = new ArrayList();
-        if(key.getTypeName().toLowerCase().contains("boolean"))
+        if(key.getTypeName().toLowerCase().contains(BOOLEAN))
             retVal.add(randomBool.getAsBoolean());
 
-        if(key.getTypeName().toLowerCase().contains("string"))
+        if(key.getTypeName().toLowerCase().contains(STRING))
             retVal.add(randomString.get());
 
-        if(key.getTypeName().toLowerCase().contains("integer"))
+        if(key.getTypeName().toLowerCase().contains(INTEGER))
             retVal.add(randomInt.getAsInt());
 
-        if(key.getTypeName().toLowerCase().contains("long"))
+        if(key.getTypeName().toLowerCase().contains(LONG))
             retVal.add(randomLong.getAsLong());
 
         return retVal;
@@ -144,30 +145,28 @@ public class MockUtilActions {
 
         Object index = null;
 
-        if(key.getTypeName().toLowerCase().contains("boolean"))
+        if(key.getTypeName().toLowerCase().contains(BOOLEAN))
             index = randomBool.getAsBoolean();
 
-        if(key.getTypeName().toLowerCase().contains("string"))
+        if(key.getTypeName().toLowerCase().contains(STRING))
             index = randomString.get();
 
-        if(key.getTypeName().toLowerCase().contains("integer"))
+        if(key.getTypeName().toLowerCase().contains(INTEGER))
             index = randomInt.getAsInt();
 
-        if(key.getTypeName().toLowerCase().contains("long"))
+        if(key.getTypeName().toLowerCase().contains(LONG))
             index = randomLong.getAsLong();
 
-
-
-        if(value.getTypeName().toLowerCase().contains("boolean"))
+        if(value.getTypeName().toLowerCase().contains(BOOLEAN))
             retVal.put(index, randomBool.getAsBoolean());
 
-        if(value.getTypeName().toLowerCase().contains("string"))
+        if(value.getTypeName().toLowerCase().contains(STRING))
             retVal.put(index,randomString.get());
 
-        if(value.getTypeName().toLowerCase().contains("integer"))
+        if(value.getTypeName().toLowerCase().contains(INTEGER))
             retVal.put(index,randomInt.getAsInt());
 
-        if(value.getTypeName().toLowerCase().contains("long"))
+        if(value.getTypeName().toLowerCase().contains(LONG))
             retVal.put(index,randomLong.getAsLong());
 
 

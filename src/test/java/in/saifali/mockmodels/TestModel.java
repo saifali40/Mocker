@@ -1,9 +1,6 @@
 package in.saifali.mockmodels;
 
-import java.util.Date;
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 public class TestModel{
 
@@ -23,6 +20,8 @@ public class TestModel{
 	Set<String> setWithvalueintialized = getSet();
 
 	Set<Integer> setWithvalueintializedinteger = getSetInteger();
+
+	List<Integer> integer;
 
 	Map<String, Boolean> demo;
 

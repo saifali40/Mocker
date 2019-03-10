@@ -1,6 +1,6 @@
 package in.saifali;
 
-import in.saifali.MockData.MockUtilActions;
+import in.saifali.mockdata.MockUtilActions;
 
 import java.lang.reflect.Field;
 import java.util.*;
@@ -28,9 +28,7 @@ public class MockUtil extends MockUtilActions {
         try {
             T clz = t.newInstance();
             fields.stream()
-                    .forEach(x -> {
-                            getFieldsByType(t, map, clz, x);
-                    });
+                    .forEach(x -> getFieldsByType(t, map, clz, x));
             setUserValue(kv, map);
             String json = gson.toJson(map);
             return gson.fromJson(json, t);
