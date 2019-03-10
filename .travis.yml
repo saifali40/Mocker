@@ -5,10 +5,9 @@ jdk:
   - oraclejdk8
 
 script:
-  - - gradle test
-  - ./gradlew build --scan -s
   - ./gradlew sonarqube \
       -Dsonar.projectKey=saifali40_Mocker \
       -Dsonar.organization=saifali40-github \
       -Dsonar.host.url=https://sonarcloud.io \
-      -Dsonar.login=a31d148a53b156aff158c62babeeea452654ab01
+      -Dsonar.login=a31d148a53b156aff158c62babeeea452654ab01 \
+      --stacktrace
