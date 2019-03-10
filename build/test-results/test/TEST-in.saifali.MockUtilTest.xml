@@ -1,15 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="in.saifali.MockUtilTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2019-03-10T15:34:01" hostname="full023-prt" time="0.438">
+<testsuite name="in.saifali.MockUtilTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2019-03-10T16:03:50" hostname="full023-prt" time="0.322">
   <properties/>
-  <testcase name="getMockData_withoutNoAdditionalParam" classname="in.saifali.MockUtilTest" time="0.312"/>
-  <testcase name="getMockData_withKv" classname="in.saifali.MockUtilTest" time="0.015"/>
-  <testcase name="getMockData_withList" classname="in.saifali.MockUtilTest" time="0.053"/>
-  <testcase name="getMockData_withMap" classname="in.saifali.MockUtilTest" time="0.006"/>
-  <testcase name="getMockDataWithAll" classname="in.saifali.MockUtilTest" time="0.004"/>
-  <testcase name="getMock_withList" classname="in.saifali.MockUtilTest" time="0.029"/>
-  <testcase name="getMockData_withoutKvandList" classname="in.saifali.MockUtilTest" time="0.009"/>
+  <testcase name="getMockData_withoutNoAdditionalParam" classname="in.saifali.MockUtilTest" time="0.242"/>
+  <testcase name="getMockData_withKv" classname="in.saifali.MockUtilTest" time="0.01"/>
+  <testcase name="getMock_exception" classname="in.saifali.MockUtilTest" time="0.015"/>
+  <testcase name="getMockData_withList" classname="in.saifali.MockUtilTest" time="0.03"/>
+  <testcase name="getMockData_withMap" classname="in.saifali.MockUtilTest" time="0.005"/>
+  <testcase name="getMockDataWithAll" classname="in.saifali.MockUtilTest" time="0.005"/>
+  <testcase name="getMock_withList" classname="in.saifali.MockUtilTest" time="0.005"/>
+  <testcase name="getMockData_withoutKvandList" classname="in.saifali.MockUtilTest" time="0.005"/>
   <testcase name="getStringCheck" classname="in.saifali.MockUtilTest" time="0.001"/>
-  <system-out><![CDATA[{"nullstrign":"cda0ebef-33e5-4f26-a9c4-18e725bab934","stringwithValue":"Active","stringbooleanValue":"True","setwithouvalue":["396612a7-fcd6-49ed-af38-b81c08867a37"],"hashsetnoValue":["f7c94ca3-3d7b-4e2d-bc2e-cf17cfd9ea3b"],"setwithoutvalueintialized":[],"setWithvalueintialized":["A","B"],"setWithvalueintializedinteger":[1,2],"integer":[100021],"demo":{"40dfb497-b4d3-402b-a246-0101149f6577":true},"novalueint":100976,"valueint":1,"novaluebool":true,"valueBool":true,"date":"Mar 10, 2019 9:04:02 PM"}
+  <system-out><![CDATA[{"nullstrign":"63a63871-a97c-44a8-b58e-1aa97f51cf1c","stringwithValue":"Active","stringbooleanValue":"True","setwithouvalue":["401aea0f-0d4c-4d70-ba0b-57e25b018971"],"hashsetnoValue":["4edd576a-548a-4ad1-bc8a-763db3d1775e"],"setwithoutvalueintialized":[],"setWithvalueintialized":["A","B"],"setWithvalueintializedinteger":[1,2],"demo":{"6b010a16-860c-4458-b728-42b9b4a993a7":false},"novalueint":100597,"valueint":1,"novaluebool":false,"valueBool":true,"date":"Mar 10, 2019 9:33:50 PM","boolMap":{"false":false},"strMap":{"bb1f945a-06c1-4db4-af46-4762b94fbb92":"464cabeb-1e69-47ce-8341-e4d2779e68ff"},"intMap":{"100894":100058},"longMap":{"-9103779550916450567":-2570730740840401399},"boolSet":[true],"strSet":["c46af8b2-36df-4fac-97c0-98bdea279fa4"],"intSet":[100503],"longSet":[2008485339327192785],"boolList":[false],"strList":["2c4e21bf-3393-40b9-9411-2b5760c24e72"],"intList":[100801],"longList":[-1742293507698576876]}
 ]]></system-out>
-  <system-err><![CDATA[]]></system-err>
+  <system-err><![CDATA[Mar 10, 2019 9:33:50 PM in.saifali.MockUtil getMockData
+WARNING: java.lang.NullPointerException
+]]></system-err>
 </testsuite>

@@ -100,7 +100,7 @@ public class MockUtilActions extends Constants {
 
 <span class="fc" id="L101">    protected static IntSupplier randomInt = () -&gt; new Random().nextInt((1000) + 1) + 100000;</span>
 
-<span class="pc" id="L103">    protected static LongSupplier randomLong = () -&gt; new Random().nextLong() + 100000L;</span>
+<span class="fc" id="L103">    protected static LongSupplier randomLong = () -&gt; new Random().nextLong() + 100000L;</span>
 
 <span class="fc bfc" id="L105" title="All 2 branches covered.">    protected static BooleanSupplier randomBool = () -&gt; System.nanoTime() % 2 != 0;</span>
 
@@ -108,8 +108,8 @@ public class MockUtilActions extends Constants {
 
     protected static Set randomSet(Type key){
 <span class="fc" id="L110">        Set retVal = new HashSet&lt;&gt;();</span>
-<span class="pc bpc" id="L111" title="1 of 2 branches missed.">        if(key.getTypeName().toLowerCase().contains(BOOLEAN))</span>
-<span class="nc" id="L112">            retVal.add(randomBool.getAsBoolean());</span>
+<span class="fc bfc" id="L111" title="All 2 branches covered.">        if(key.getTypeName().toLowerCase().contains(BOOLEAN))</span>
+<span class="fc" id="L112">            retVal.add(randomBool.getAsBoolean());</span>
 
 <span class="fc bfc" id="L114" title="All 2 branches covered.">        if(key.getTypeName().toLowerCase().contains(STRING))</span>
 <span class="fc" id="L115">            retVal.add(randomString.get());</span>
@@ -117,61 +117,61 @@ public class MockUtilActions extends Constants {
 <span class="fc bfc" id="L117" title="All 2 branches covered.">        if(key.getTypeName().toLowerCase().contains(INTEGER))</span>
 <span class="fc" id="L118">            retVal.add(randomInt.getAsInt());</span>
 
-<span class="pc bpc" id="L120" title="1 of 2 branches missed.">        if(key.getTypeName().toLowerCase().contains(LONG))</span>
-<span class="nc" id="L121">            retVal.add(randomLong.getAsLong());</span>
+<span class="fc bfc" id="L120" title="All 2 branches covered.">        if(key.getTypeName().toLowerCase().contains(LONG))</span>
+<span class="fc" id="L121">            retVal.add(randomLong.getAsLong());</span>
 
 <span class="fc" id="L123">        return retVal;</span>
-    };
+    }
 
     protected static List randomList(Type key){
 <span class="fc" id="L127">        List retVal = new ArrayList();</span>
-<span class="pc bpc" id="L128" title="1 of 2 branches missed.">        if(key.getTypeName().toLowerCase().contains(BOOLEAN))</span>
-<span class="nc" id="L129">            retVal.add(randomBool.getAsBoolean());</span>
+<span class="fc bfc" id="L128" title="All 2 branches covered.">        if(key.getTypeName().toLowerCase().contains(BOOLEAN))</span>
+<span class="fc" id="L129">            retVal.add(randomBool.getAsBoolean());</span>
 
-<span class="pc bpc" id="L131" title="1 of 2 branches missed.">        if(key.getTypeName().toLowerCase().contains(STRING))</span>
-<span class="nc" id="L132">            retVal.add(randomString.get());</span>
+<span class="fc bfc" id="L131" title="All 2 branches covered.">        if(key.getTypeName().toLowerCase().contains(STRING))</span>
+<span class="fc" id="L132">            retVal.add(randomString.get());</span>
 
-<span class="pc bpc" id="L134" title="1 of 2 branches missed.">        if(key.getTypeName().toLowerCase().contains(INTEGER))</span>
+<span class="fc bfc" id="L134" title="All 2 branches covered.">        if(key.getTypeName().toLowerCase().contains(INTEGER))</span>
 <span class="fc" id="L135">            retVal.add(randomInt.getAsInt());</span>
 
-<span class="pc bpc" id="L137" title="1 of 2 branches missed.">        if(key.getTypeName().toLowerCase().contains(LONG))</span>
-<span class="nc" id="L138">            retVal.add(randomLong.getAsLong());</span>
+<span class="fc bfc" id="L137" title="All 2 branches covered.">        if(key.getTypeName().toLowerCase().contains(LONG))</span>
+<span class="fc" id="L138">            retVal.add(randomLong.getAsLong());</span>
 
 <span class="fc" id="L140">        return retVal;</span>
-    };
+    }
 
     private static Object randomMap(Type key, Type value) {
 <span class="fc" id="L144">        Map retVal = new HashMap();</span>
 
 <span class="fc" id="L146">        Object index = null;</span>
 
-<span class="pc bpc" id="L148" title="1 of 2 branches missed.">        if(key.getTypeName().toLowerCase().contains(BOOLEAN))</span>
-<span class="nc" id="L149">            index = randomBool.getAsBoolean();</span>
+<span class="fc bfc" id="L148" title="All 2 branches covered.">        if(key.getTypeName().toLowerCase().contains(BOOLEAN))</span>
+<span class="fc" id="L149">            index = randomBool.getAsBoolean();</span>
 
-<span class="pc bpc" id="L151" title="1 of 2 branches missed.">        if(key.getTypeName().toLowerCase().contains(STRING))</span>
+<span class="fc bfc" id="L151" title="All 2 branches covered.">        if(key.getTypeName().toLowerCase().contains(STRING))</span>
 <span class="fc" id="L152">            index = randomString.get();</span>
 
-<span class="pc bpc" id="L154" title="1 of 2 branches missed.">        if(key.getTypeName().toLowerCase().contains(INTEGER))</span>
-<span class="nc" id="L155">            index = randomInt.getAsInt();</span>
+<span class="fc bfc" id="L154" title="All 2 branches covered.">        if(key.getTypeName().toLowerCase().contains(INTEGER))</span>
+<span class="fc" id="L155">            index = randomInt.getAsInt();</span>
 
-<span class="pc bpc" id="L157" title="1 of 2 branches missed.">        if(key.getTypeName().toLowerCase().contains(LONG))</span>
-<span class="nc" id="L158">            index = randomLong.getAsLong();</span>
+<span class="fc bfc" id="L157" title="All 2 branches covered.">        if(key.getTypeName().toLowerCase().contains(LONG))</span>
+<span class="fc" id="L158">            index = randomLong.getAsLong();</span>
 
-<span class="pc bpc" id="L160" title="1 of 2 branches missed.">        if(value.getTypeName().toLowerCase().contains(BOOLEAN))</span>
+<span class="fc bfc" id="L160" title="All 2 branches covered.">        if(value.getTypeName().toLowerCase().contains(BOOLEAN))</span>
 <span class="fc" id="L161">            retVal.put(index, randomBool.getAsBoolean());</span>
 
-<span class="pc bpc" id="L163" title="1 of 2 branches missed.">        if(value.getTypeName().toLowerCase().contains(STRING))</span>
-<span class="nc" id="L164">            retVal.put(index,randomString.get());</span>
+<span class="fc bfc" id="L163" title="All 2 branches covered.">        if(value.getTypeName().toLowerCase().contains(STRING))</span>
+<span class="fc" id="L164">            retVal.put(index,randomString.get());</span>
 
-<span class="pc bpc" id="L166" title="1 of 2 branches missed.">        if(value.getTypeName().toLowerCase().contains(INTEGER))</span>
-<span class="nc" id="L167">            retVal.put(index,randomInt.getAsInt());</span>
+<span class="fc bfc" id="L166" title="All 2 branches covered.">        if(value.getTypeName().toLowerCase().contains(INTEGER))</span>
+<span class="fc" id="L167">            retVal.put(index,randomInt.getAsInt());</span>
 
-<span class="pc bpc" id="L169" title="1 of 2 branches missed.">        if(value.getTypeName().toLowerCase().contains(LONG))</span>
-<span class="nc" id="L170">            retVal.put(index,randomLong.getAsLong());</span>
+<span class="fc bfc" id="L169" title="All 2 branches covered.">        if(value.getTypeName().toLowerCase().contains(LONG))</span>
+<span class="fc" id="L170">            retVal.put(index,randomLong.getAsLong());</span>
 
 
 <span class="fc" id="L173">        return retVal;</span>
-    };
+    }
 
 
 }
