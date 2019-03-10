@@ -1,6 +1,6 @@
 # Mocker
 
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=saifali40_Mocker&metric=alert_status)](https://sonarcloud.io/dashboard?id=saifali40_Mocker)
+
 [![Bugs](https://sonarcloud.io/api/project_badges/measure?project=saifali40_Mocker&metric=bugs)](https://sonarcloud.io/dashboard?id=saifali40_Mocker)
 [![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=saifali40_Mocker&metric=code_smells)](https://sonarcloud.io/dashboard?id=saifali40_Mocker)
 [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=saifali40_Mocker&metric=coverage)](https://sonarcloud.io/dashboard?id=saifali40_Mocker)
