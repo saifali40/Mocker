@@ -1,0 +1,9 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: Mocker
+  annotations:
+    github.com/project-slug: saifali40/Mocker
+spec:
+  type: other
+  lifecycle: unknown
